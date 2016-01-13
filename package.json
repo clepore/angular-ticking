@@ -24,6 +24,6 @@
     "express": "^4.13.3"
   },
   "scripts": {
-      "postinstall": "bower install",
+      "postinstall": "bower install"
     }
 }
