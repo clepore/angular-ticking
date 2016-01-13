@@ -52,7 +52,8 @@
 
           <h2>To run and test</h2>
           <h3>Clone or download the code</h3>
-          <p>From here: <a href="https://github.com/clepore/angular-ticking">Github Repo</a>
+          <p>From here: <a href="https://github.com/clepore/angular-ticking">Github Repo</a></p>
+
           <h3>Install Dependencies</h3>
           <p>There are have two kinds of dependencies in this project: tools and angular framework code.  The tools help manage and test the application.</p>
           <ul>
@@ -72,6 +73,18 @@
           <p>The project has been configured with a simple development web server.  The simplest way to start this server is:</p>
           <pre><code>npm start</code></pre>
           <p>Now browse to the app at <code>http://localhost:8000/app/index.html</code>.</p>
+
+          <h3>Running Unit Tests</h3>
+          <p>The angular-seed app comes preconfigured with unit tests. These are written in <a href="http://jasmine.github.io">Jasmine</a>, which we run with the <a href="http://karma-runner.github.io">Karma Test Runner</a>. We provide a Karma configuration file to run them.</p>
+          <ul>
+            <li>the configuration is found at <code>karma.conf.js</code></li>
+            <li>the unit tests are found next to the code they are testing and are named as <code>..._test.js</code>.</li>
+          </ul>
+          <p>The easiest way to run the unit tests is to use the supplied npm script:</p>
+          <pre><code>npm test</code></pre>
+          <p>This script will start the Karma test runner to execute the unit tests. Moreover, Karma will sit and watch the source and test files for changes and then re-run the tests whenever any of them change. This is the recommended strategy; if your unit tests are being run every time you save a file then you receive instant feedback on any changes that break the expected code functionality.</p>
+          <p>You can also ask Karma to do a single run of the tests and then exit.  This is useful if you want to check that a particular version of the code is operating as expected.  The project contains a predefined script to do this:</p>
+          <pre><code>npm run test-single-run</code></pre>
         </section>
         <aside id="sidebar">
           <a href="https://github.com/clepore/angular-ticking/zipball/master" class="button">
