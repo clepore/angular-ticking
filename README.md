@@ -1,11 +1,8 @@
-Angular-ticking to show off a bit of my capabilities
+Angular-ticking 
 ====================================================
-
 Christopher Lepore
 
-Angular Pomodoro-like task app.
-
-### Simple pomodoro app in js ###
+An angular-based pomodoro-like task app to show off a bit of my experience.
 (http://en.wikipedia.org/wiki/Pomodoro_Technique)
 
 Basically its a todo app that’s tied to a timer (all client side). Pomodoros are usually 25 minute intervals but for this demo they are varying durations in seconds. 
