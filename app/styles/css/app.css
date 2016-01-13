@@ -21,6 +21,10 @@
  * Base styles
  */
 
+a {
+  cursor: pointer;
+}
+
 .page-header {
   position: relative;
 }

@@ -61,5 +61,8 @@
             </td>
         </tr>
     </table>
+    <div class="well well-default text-center" ng-show="!tasksCtrl.tasks.length">
+        You currently do not have any tasks. You can always <a ng-click="tasksCtrl.loadExamples()">add a few examples</a>.
+    </div>
     <a href="#/expired">View Expired Timers</a>
 </section>
