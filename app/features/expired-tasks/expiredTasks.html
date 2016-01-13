@@ -1,0 +1,24 @@
+<section class="container" ng-controller="ExpiredTasksCtrl as expiredCtrl">
+    <header class="page-header">
+        <h1>Pomodoro Tasks <small>(Expired)</small></h1>
+    </header>
+    <a href="#/tasks"><i class="glyphicon glyphicon-chevron-left"></i>Back to Active Tasks</a>
+    <table class="table task-container">
+        <thead>
+            <tr>
+                <th><i class="glyphicon glyphicon-tasks"></i> Task Name</th>
+                <th class="text-right"><i class="glyphicon glyphicon-calendar"></i> Added</th>
+                <th class="text-right"><i class="glyphicon glyphicon-time"></i> Time Left</th>
+            </tr>
+        </thead>
+        <tr
+            ng-repeat="task in expiredCtrl.tasks | filter: { remaining: 0 } track by task.id">
+            <td ng-bind="task.name"></td>
+            <td class="text-right" ng-bind="task.date | date: 'medium'"></td>
+            <td class="text-right" ng-bind="task.remaining"></td>
+        </tr>
+    </table>
+    <div class="well well-default text-center" ng-show="!expiredCtrl.hasExpiredTasks">
+        You do not have any expired tasks. <a href="#/tasks">Return to your active tasks.</a>
+    </div>
+</section>

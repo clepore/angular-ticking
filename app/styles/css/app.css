@@ -1,0 +1,54 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/**
+ *  Flatten boostrap 
+ *  from (https://gist.github.com/nodesocket/5843712)
+ */
+.well, .navbar-inner, .popover, .btn, .tooltip, input, select, textarea, pre, .progress, .modal, .add-on, .alert, .table-bordered, .nav>.active>a, .dropdown-menu, .tooltip-inner, .badge, .label, .img-polaroid {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important;
+  border-collapse: collapse !important;
+  background-image: none !important;
+}
+
+/*
+ * Base styles
+ */
+
+.page-header {
+  position: relative;
+}
+
+header .countdown {
+  color: #04c;
+  font-size: 45px;
+  font-weight: 600;
+  position: absolute;
+  right: 15px;
+  top: -13px;
+}
+
+.task-form {
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.task-container {
+  border-top: solid 1px #ddd;
+  border-bottom: 1px solid #ddd;
+  margin-top: 20px;
+}
+
+.task-container > tbody > tr > td {
+  vertical-align: middle;
+}
+
+.task-container .expired {
+  display: none;
+}

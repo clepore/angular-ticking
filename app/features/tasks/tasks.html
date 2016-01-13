@@ -1,0 +1,65 @@
+<section class="container" ng-controller="TasksCtrl as tasksCtrl">
+    <header class="page-header">
+        <h1>Pomodoro Tasks</h1>
+        <div class="countdown" ng-bind="tasksCtrl.countdown"></div>
+    </header>
+    <form id="taskForm" name="taskForm" class="task-form">
+        <button type="button" class="btn btn-link pull-right" ng-click="tasksCtrl.loadExamples()">Reset to Examples</button>
+        <div class="input-group col-xs-4">
+            <input
+                type="text"
+                class="form-control task-name"
+                name="name"
+                placeholder="New Task"
+                ng-model="tasksCtrl.taskName"
+                required>
+            <span class="input-group-btn">
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                    ng-click="tasksCtrl.addTask()"
+                    ng-disabled="taskForm.$invalid"
+                    title="Add New Task">
+                    Add
+                </button>
+            </span>
+        </div>
+    </form>
+    <table class="table table-hover task-container">
+        <thead>
+            <tr>
+                <th><i class="glyphicon glyphicon-tasks"></i> Task Name</th>
+                <th class="text-right"><i class="glyphicon glyphicon-calendar"></i> Added</th>
+                <th class="text-right"><i class="glyphicon glyphicon-time"></i> Time Left</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tr
+            ng-repeat="task in tasksCtrl.tasks track by task.id"
+            ng-class="{ 'success': task.isActive, 'expired': task.remaining === 0 }">
+            <td ng-bind="task.name"></td>
+            <td class="text-right" ng-bind="task.date | date: 'medium'"></td>
+            <td class="text-right" ng-bind="task.remaining"></td>
+            <td class="text-right">
+                <button
+                    type="button"
+                    class="btn btn-success"
+                    title="Start this task"
+                    ng-click="tasksCtrl.startTimer(task)"
+                    ng-disabled="timerIsRunning"
+                    ng-hide="task.isActive">
+                    <i class="glyphicon glyphicon-play"></i>
+                </button>
+                <button
+                    type="button"
+                    class="btn btn-danger"
+                    title="Start this task"
+                    ng-click="tasksCtrl.stopTimer(task)"
+                    ng-show="task.isActive">
+                    <i class="glyphicon glyphicon-stop"></i>
+                </button>
+            </td>
+        </tr>
+    </table>
+    <a href="#/expired">View Expired Timers</a>
+</section>
