@@ -19,4 +19,5 @@ Basically a todo app that’s tied to a timer (all on the client side). Pomodoro
 - rename/remove/reorder tasks
 - slick/creative GUI
 
-Seeded from: https://github.com/angular/angular-seed
+===============================
+Templated from from: https://github.com/angular/angular-seed
