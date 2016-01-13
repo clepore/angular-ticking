@@ -22,6 +22,14 @@ Basically its a todo app that’s tied to a timer (all client side). Pomodoros a
 - the ability to load sample tasks
 
 
+**Future updates:**
+- Refactor some common controller functions into a shared utility service
+- Refactor geting/saving code into a shared data service with cacheing
+- Ability to input the duration along with the task name
+- Load code asyhconnously (convience of the angular-seeder template)
+
+
+
 
 ===============================
 Templated from from: https://github.com/angular/angular-seed
