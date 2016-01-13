@@ -24,11 +24,10 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h3>
-            <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to Angular Ticking.
-          </h3>
+          <h3>Welcome to Angular Ticking.</h3>
           <p>This is an angular-based pomodoro-like task app. Basically its a todo app that's tied to a timer (all client side). Pomodoros are usually 25 minute intervals but for this demo they are varying durations in seconds.</p>
           <p><a href="http://en.wikipedia.org/wiki/Pomodoro_Technique">More info about pomodoro technique.</a></p>
+          
           <h3>The app features:</h3>
           <p>
             <ul>
@@ -42,6 +41,7 @@
               <li>Using <code>$http</code> to load examples from a <code>json</code> file</li>
             </ul>
           </p>
+
           <h3>Upcoming ideas:</h3>
           <p>
             <ul>
@@ -51,6 +51,26 @@
               <li>Load code asyhconnously (convience of the angular-seeder template)</li>
             </ul>
           </p>
+
+          <h3>Install Dependencies</h3>
+          <p>There are have two kinds of dependencies in this project: tools and angular framework code.  The tools help manage and test the application.</p>
+          <ul>
+            <li>It gets the tools we depend upon via <code>npm</code>, the <a href="https://www.npmjs.org/">node package manager</a>.</li>
+            <li>It gets the angular code via <code>bower</code>, a <a href="http://bower.io">client-side code package manager</a>.</li>
+          </ul>
+          <p><code>npm</code> has been configured to automatically run <code>bower</code> so we can simply do:</p>
+          <pre><code>npm install</code></pre>
+          <p>Behind the scenes this will also call <code>bower install</code>.  You should find that you have two new folders in your project.</p>
+          <ul>
+            <li><code>node_modules</code> - contains the npm packages for the tools we need</li>
+            <li><code>app/bower_components</code> - contains the angular framework files</li>
+          </ul>
+          <p><em>Note that the <code>bower_components</code> folder would normally be installed in the root folder but angular-seed changes this location through the <code>.bowerrc</code> file.  Putting it in the app folder makes it easier to serve the files by a webserver.</em></p>
+
+          <h4>Run the Application</h4>
+          <p>We have preconfigured the project with a simple development web server.  The simplest way to start this server is:</p>
+          <pre><code>npm start</code></pre>
+          <p>Now browse to the app at <code>http://localhost:8000/app/index.html</code>.</p>
         </section>
         <aside id="sidebar">
           <a href="https://github.com/clepore/angular-ticking/zipball/master" class="button">
