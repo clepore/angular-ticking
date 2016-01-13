@@ -2,8 +2,8 @@ times-ticking angular part deux
 ===============================
 
 Christopher Lepore
+
 Updated Angular Pomodoro-like app.
-(https://github.com/clepore/times-ticking)
 
 ### Simple pomodoro app in js ###
 (http://en.wikipedia.org/wiki/Pomodoro_Technique)
@@ -18,3 +18,5 @@ Basically a todo app that’s tied to a timer (all on the client side). Pomodoro
 **Bonus points:**
 - rename/remove/reorder tasks
 - slick/creative GUI
+
+Seeded from: https://github.com/angular/angular-seed
