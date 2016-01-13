@@ -20,5 +20,7 @@
   "engines": {
     "node": "v5.3.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "express": "^4.13.3"
+  }
 }
